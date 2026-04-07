@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Dev files
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Local env files
+.env.local
+.env.*.local
+
+# Test files
+*.test.ts
+*.spec.ts
