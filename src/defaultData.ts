@@ -9,9 +9,9 @@
 
 export const DEFAULT_DATA = {
   "_version": 1,
-  "_exportedAt": "2026-04-07T08:20:30.237Z",
+  "_exportedAt": "2026-04-08T08:53:56.847Z",
   "departmentName": "G78决战平安京",
-  "selectedStep": "引擎动画",
+  "selectedStep": "特效",
   "stepUiState": {
     "deleted-场景编辑": true
   },
@@ -47,7 +47,7 @@ export const DEFAULT_DATA = {
             "name": "跑通标杆设计方向和规范",
             "content": "",
             "owner": "德子",
-            "status": "todo"
+            "status": "done"
           },
           {
             "id": "task-1775548531843-0-v8iuyo",
@@ -55,7 +55,7 @@ export const DEFAULT_DATA = {
             "name": "设计AI流程搭建",
             "content": "",
             "owner": "德子",
-            "status": "todo"
+            "status": "doing"
           },
           {
             "id": "task-1775548552635-0-a7t2ih",
@@ -66,7 +66,7 @@ export const DEFAULT_DATA = {
             "status": "todo"
           }
         ],
-        "isExpanded": true,
+        "isExpanded": false,
         "level": 1
       },
       {
@@ -86,10 +86,10 @@ export const DEFAULT_DATA = {
             "name": "设计AI流程搭建",
             "content": "通过草图+AI的形式",
             "owner": "德子",
-            "status": "todo"
+            "status": "doing"
           }
         ],
-        "isExpanded": true,
+        "isExpanded": false,
         "level": 1
       },
       {
@@ -112,34 +112,34 @@ export const DEFAULT_DATA = {
             "status": "todo"
           }
         ],
-        "isExpanded": true,
+        "isExpanded": false,
         "level": 2
       },
       {
-        "id": "角色原画-1775210418842-axndmr",
-        "name": "最终立绘细化",
-        "tool": "SD/banana",
-        "notes": "细化后模糊/设计细节不到位",
+        "id": "角色原画-1775635363235-7ufx5x",
+        "name": "三视图",
+        "tool": "",
+        "notes": "",
         "forecastLevels": {
-          "apr": 2,
-          "may": 2,
+          "apr": null,
+          "may": null,
           "jun": 3
         },
         "tasks": [
           {
-            "id": "task-1775548769115-3-7g3ayx",
-            "month": "jun",
-            "name": "集成到agent",
-            "content": "完成细化流程SD接入天宫",
-            "owner": "潘潘",
-            "status": "todo"
+            "id": "task-1775635404049-3-4wfkvu",
+            "month": "apr",
+            "name": "三视图概念AI流程",
+            "content": "优化原有的三视图人工流程",
+            "owner": "德子",
+            "status": "done"
           },
           {
-            "id": "task-1775548789395-3-0fnbvf",
-            "month": "apr",
-            "name": "训练立绘lora",
-            "content": "",
-            "owner": "潘潘",
+            "id": "task-1775635440776-3-4wqooi",
+            "month": "jun",
+            "name": "集成agent",
+            "content": "天工",
+            "owner": "德子",
             "status": "todo"
           }
         ],
@@ -161,20 +161,20 @@ export const DEFAULT_DATA = {
             "id": "task-1775548806930-4-muf8e9",
             "month": "apr",
             "name": "跑通AI三视图流程",
-            "content": "",
-            "owner": "德子",
-            "status": "todo"
+            "content": "banana",
+            "owner": "潘潘",
+            "status": "doing"
           },
           {
             "id": "task-1775548823338-4-mo7k0f",
             "month": "may",
             "name": "集成到agent",
-            "content": "",
-            "owner": "德子",
+            "content": "生成高精度的用于CG的三视图",
+            "owner": "潘潘",
             "status": "todo"
           }
         ],
-        "isExpanded": true,
+        "isExpanded": false,
         "level": 2
       }
     ],
@@ -185,18 +185,18 @@ export const DEFAULT_DATA = {
         "tool": "banana",
         "notes": "需要局部处理，再拼接，手绘调修",
         "forecastLevels": {
-          "apr": 1,
+          "apr": 2,
           "may": 2,
           "jun": 3
         },
         "tasks": [
           {
             "id": "task-1775549393594-0-2vm7z7",
-            "month": "may",
+            "month": "apr",
             "name": "提升AI比重",
             "content": "",
             "owner": "彦举",
-            "status": "todo"
+            "status": "doing"
           },
           {
             "id": "task-1775549402618-0-6hwl80",
@@ -216,18 +216,18 @@ export const DEFAULT_DATA = {
         "tool": "banana",
         "notes": "需要局部处理，再拼接，手绘调修",
         "forecastLevels": {
-          "apr": 1,
+          "apr": 2,
           "may": 2,
           "jun": 2
         },
         "tasks": [
           {
             "id": "task-1775549419297-1-rxr3si",
-            "month": "may",
+            "month": "apr",
             "name": "提升AI比重",
             "content": "",
             "owner": "彦举",
-            "status": "todo"
+            "status": "doing"
           }
         ],
         "isExpanded": false,
@@ -239,18 +239,18 @@ export const DEFAULT_DATA = {
         "tool": "banana",
         "notes": "需要局部处理，再拼接",
         "forecastLevels": {
-          "apr": 1,
+          "apr": 2,
           "may": 2,
           "jun": 3
         },
         "tasks": [
           {
             "id": "task-1775549438857-2-9ijpz7",
-            "month": "may",
+            "month": "apr",
             "name": "提升AI比重",
             "content": "",
             "owner": "彦举",
-            "status": "todo"
+            "status": "doing"
           },
           {
             "id": "task-1775549453513-2-dfn9s4",
@@ -270,14 +270,14 @@ export const DEFAULT_DATA = {
         "tool": "banana",
         "notes": "刻画表现方向差异，需要手绘处理",
         "forecastLevels": {
-          "apr": 1,
+          "apr": 2,
           "may": 2,
           "jun": 3
         },
         "tasks": [
           {
             "id": "task-1775549487505-3-een1xb",
-            "month": "may",
+            "month": "apr",
             "name": "优化生成效果",
             "content": "可以训练项目的lora",
             "owner": "彦举",
@@ -338,6 +338,14 @@ export const DEFAULT_DATA = {
             "content": "尝试agent基于画风文档基于现有图的反馈",
             "owner": "潘潘",
             "status": "todo"
+          },
+          {
+            "id": "task-1775634942565-1-2zsvw5",
+            "month": "apr",
+            "name": "项目宣传规则md",
+            "content": "约束审核skill",
+            "owner": "潘潘",
+            "status": "doing"
           }
         ],
         "isExpanded": false,
@@ -357,7 +365,7 @@ export const DEFAULT_DATA = {
           {
             "id": "task-1775547863892-2-nz858n",
             "month": "apr",
-            "name": "banana立绘流程",
+            "name": "banana宣传流程",
             "content": "",
             "owner": "潘潘",
             "status": "todo"
@@ -389,23 +397,15 @@ export const DEFAULT_DATA = {
             "id": "task-1775547939587-3-6nwq6r",
             "month": "apr",
             "name": "训练项目lora",
-            "content": "",
+            "content": "高模修图",
             "owner": "潘潘",
-            "status": "todo"
-          },
-          {
-            "id": "task-1775547958188-3-crh1pk",
-            "month": "may",
-            "name": "跑通SD细化立绘流程",
-            "content": "",
-            "owner": "潘潘",
-            "status": "todo"
+            "status": "doing"
           },
           {
             "id": "task-1775547974644-3-f1pt0w",
             "month": "jun",
             "name": "接入agent",
-            "content": "",
+            "content": "模型渲染图丢给天工，天工出高模修图完成版",
             "owner": "潘潘",
             "status": "todo"
           }
@@ -432,11 +432,42 @@ export const DEFAULT_DATA = {
             "name": "拆分组件生成流程",
             "content": "banana先做拆分清晰，分块生成，提高大型的AI占比",
             "owner": "煊赫",
-            "status": "todo"
+            "status": "done"
+          },
+          {
+            "id": "task-1775637773355-0-l6gah9",
+            "month": "jun",
+            "name": "集成天工",
+            "content": "",
+            "owner": "煊赫",
+            "status": "doing"
           }
         ],
         "isExpanded": false,
         "level": 1
+      },
+      {
+        "id": "3D角色-1775616218701-kot8c1",
+        "name": "局内用（动作版）",
+        "tool": "Tripo\\混元3d\\banana",
+        "notes": "",
+        "forecastLevels": {
+          "apr": null,
+          "may": 3,
+          "jun": 3
+        },
+        "tasks": [
+          {
+            "id": "task-1775616325185-1-dt8i31",
+            "month": "may",
+            "name": "天工接入",
+            "content": "",
+            "owner": "煊赫",
+            "status": "doing"
+          }
+        ],
+        "isExpanded": false,
+        "level": 2
       },
       {
         "id": "3D角色-1775210391355-zhe7dz",
@@ -450,12 +481,12 @@ export const DEFAULT_DATA = {
         },
         "tasks": [
           {
-            "id": "task-1775534169837-1-0fgztj",
-            "month": "apr",
-            "name": "拆分组件生成流程",
-            "content": "banana先做拆分清晰，分块生成，提高大型的AI占比",
+            "id": "task-1775616696623-2-9gztzc",
+            "month": "may",
+            "name": "提高AI占比",
+            "content": "",
             "owner": "煊赫",
-            "status": "todo"
+            "status": "doing"
           }
         ],
         "isExpanded": false,
@@ -475,10 +506,10 @@ export const DEFAULT_DATA = {
           {
             "id": "task-1775534326881-2-cz3euh",
             "month": "apr",
-            "name": "细化流程优化",
-            "content": "通过AI生成的高模+三视图，叠给AI继续优化生成",
+            "name": "细化流程反馈优化",
+            "content": "通过AI生成的高模+三视图，叠给AI继续反馈外包修改",
             "owner": "煊赫",
-            "status": "todo"
+            "status": "doing"
           },
           {
             "id": "task-1775534467215-2-b3o4xy",
@@ -509,7 +540,7 @@ export const DEFAULT_DATA = {
             "name": "新工具探索",
             "content": "自动化的拓扑工具探索（比如blender的自动拓扑）",
             "owner": "煊赫",
-            "status": "todo"
+            "status": "doing"
           },
           {
             "id": "task-1775534626276-3-q68rs2",
@@ -538,7 +569,7 @@ export const DEFAULT_DATA = {
         "notes": "目前ai生成uv效果较差，会出现精度分布不合理；摆放不合理；无法识别对称部件等问题，对贴图精度影响较大",
         "forecastLevels": {
           "apr": 1,
-          "may": 2,
+          "may": 1,
           "jun": 2
         },
         "tasks": [
@@ -548,7 +579,7 @@ export const DEFAULT_DATA = {
             "name": "探索新的UV工具",
             "content": "",
             "owner": "煊赫",
-            "status": "todo"
+            "status": "doing"
           }
         ],
         "isExpanded": false,
@@ -571,7 +602,7 @@ export const DEFAULT_DATA = {
             "name": "探索烘焙软件接入到agent",
             "content": "",
             "owner": "煊赫",
-            "status": "todo"
+            "status": "doing"
           }
         ],
         "isExpanded": false,
@@ -591,10 +622,10 @@ export const DEFAULT_DATA = {
           {
             "id": "task-1775545156924-6-846vud",
             "month": "apr",
-            "name": "探索贴图转PBR流程",
+            "name": "banana细化贴图",
             "content": "",
             "owner": "煊赫",
-            "status": "todo"
+            "status": "doing"
           }
         ],
         "isExpanded": false,
@@ -606,18 +637,18 @@ export const DEFAULT_DATA = {
         "tool": "Tripo、banana",
         "notes": "该环节对审美能力与项目深度理解要求较高，暂无ai方案替代，需人工深度参与。",
         "forecastLevels": {
-          "apr": 1,
-          "may": 2,
-          "jun": 3
+          "apr": 0,
+          "may": 1,
+          "jun": 2
         },
         "tasks": [
           {
             "id": "task-1775545662278-7-bzmlr5",
-            "month": "apr",
-            "name": "配置进入到agent",
-            "content": "可以通过agent，一键调出引擎端的对应角色和皮肤",
+            "month": "may",
+            "name": "AI引擎初步联调",
+            "content": "",
             "owner": "煊赫",
-            "status": "todo"
+            "status": "doing"
           }
         ],
         "isExpanded": false,
@@ -707,7 +738,7 @@ export const DEFAULT_DATA = {
             "status": "todo"
           }
         ],
-        "isExpanded": true,
+        "isExpanded": false,
         "level": 0
       },
       {
@@ -809,44 +840,13 @@ export const DEFAULT_DATA = {
             "name": "探索骨骼搭建工具",
             "content": "",
             "owner": "军彪",
-            "status": "todo"
+            "status": "doing"
           },
           {
             "id": "task-1775549683298-0-ub2ohv",
             "month": "may",
             "name": "提升AI生成占比",
             "content": "",
-            "owner": "军彪",
-            "status": "todo"
-          }
-        ],
-        "isExpanded": false,
-        "level": 0
-      },
-      {
-        "id": "引擎动画-1775210444084-wjq9bx",
-        "name": "绑定效果校验",
-        "tool": "",
-        "notes": "AccuRIG / Character Creator / Mixamo\n这些只能应对结构简单的人体无衣服和挂件的绑定\n当服装和道具结构复杂，当前AI无法胜任",
-        "forecastLevels": {
-          "apr": 1,
-          "may": 1,
-          "jun": 2
-        },
-        "tasks": [
-          {
-            "id": "task-1775549705638-1-9i5mob",
-            "month": "apr",
-            "name": "AI动作校验",
-            "content": "基于绑定完成的骨骼，自动跑预设的动作库校验",
-            "owner": "军彪",
-            "status": "todo"
-          },
-          {
-            "id": "task-1775549743367-1-ndl27o",
-            "month": "jun",
-            "name": "自动化校验",
-            "content": "AI纠错审核",
             "owner": "军彪",
             "status": "todo"
           }
@@ -871,7 +871,7 @@ export const DEFAULT_DATA = {
             "name": "通过sd生成动作参考",
             "content": "",
             "owner": "军彪",
-            "status": "todo"
+            "status": "doing"
           },
           {
             "id": "task-1775549802084-2-zvgx0j",
@@ -900,7 +900,7 @@ export const DEFAULT_DATA = {
             "id": "task-1775549855779-3-8ht2x0",
             "month": "jun",
             "name": "尝试跑通sd生成流程",
-            "content": "",
+            "content": "等sd稳定后",
             "owner": "军彪",
             "status": "todo"
           }
@@ -925,7 +925,7 @@ export const DEFAULT_DATA = {
             "name": "探索新AI工具落地",
             "content": "",
             "owner": "军彪",
-            "status": "todo"
+            "status": "doing"
           },
           {
             "id": "task-1775549890888-4-ztrwoh",
@@ -955,12 +955,12 @@ export const DEFAULT_DATA = {
       },
       {
         "id": "引擎动画-1775210444084-vof653",
-        "name": "动作导入校验",
+        "name": "动作导出挂接",
         "tool": "",
         "notes": "",
         "forecastLevels": {
           "apr": 1,
-          "may": 1,
+          "may": 2,
           "jun": 3
         },
         "tasks": [
@@ -971,6 +971,14 @@ export const DEFAULT_DATA = {
             "content": "",
             "owner": "军彪",
             "status": "todo"
+          },
+          {
+            "id": "task-1775637083676-5-muwg5t",
+            "month": "may",
+            "name": "AI接入",
+            "content": "",
+            "owner": "军彪",
+            "status": "doing"
           }
         ],
         "isExpanded": false,
@@ -995,10 +1003,10 @@ export const DEFAULT_DATA = {
             "name": "提升AI比重",
             "content": "",
             "owner": "郑洪",
-            "status": "todo"
+            "status": "doing"
           }
         ],
-        "isExpanded": true,
+        "isExpanded": false,
         "level": 1
       },
       {
@@ -1018,7 +1026,7 @@ export const DEFAULT_DATA = {
             "name": "提升AI比重",
             "content": "",
             "owner": "郑洪",
-            "status": "todo"
+            "status": "doing"
           }
         ],
         "isExpanded": false,
@@ -1041,7 +1049,7 @@ export const DEFAULT_DATA = {
             "name": "提升AI比重",
             "content": "",
             "owner": "郑洪",
-            "status": "todo"
+            "status": "doing"
           }
         ],
         "isExpanded": false,
@@ -1120,7 +1128,7 @@ export const DEFAULT_DATA = {
             "name": "优化LOD工具",
             "content": "",
             "owner": "郑洪",
-            "status": "todo"
+            "status": "doing"
           }
         ],
         "isExpanded": false,
@@ -1134,27 +1142,92 @@ export const DEFAULT_DATA = {
         "tool": "codemaker、Grok",
         "notes": "",
         "forecastLevels": {
-          "apr": null,
-          "may": 2,
+          "apr": 2,
+          "may": 3,
           "jun": 3
         },
-        "tasks": [],
+        "tasks": [
+          {
+            "id": "task-1775634060141-0-67fwrp",
+            "month": "may",
+            "name": "集成到天工开发",
+            "content": "相关的渲染需求和项目TA业务用天工开发",
+            "owner": "孟博士",
+            "status": "doing"
+          },
+          {
+            "id": "task-1775634140741-0-sk78ic",
+            "month": "jun",
+            "name": "全自动需求处理",
+            "content": "相关需求全自动编写，人工少量审核跟进",
+            "owner": "孟博士",
+            "status": "todo"
+          }
+        ],
         "isExpanded": false,
         "level": 2
       },
       {
         "id": "TA-1775210470906-ret50b",
-        "name": "天工开发",
-        "tool": "",
+        "name": "天工开发推进",
+        "tool": "天工",
         "notes": "",
         "forecastLevels": {
-          "apr": null,
+          "apr": 3,
           "may": 3,
           "jun": 3
         },
-        "tasks": [],
+        "tasks": [
+          {
+            "id": "task-1775634069453-1-26sj4d",
+            "month": "apr",
+            "name": "组内agent教学分享",
+            "content": "skill配置搭建和案例推广等",
+            "owner": "孟博士",
+            "status": "doing"
+          },
+          {
+            "id": "task-1775634196539-1-6rcv8c",
+            "month": "may",
+            "name": "项目知识库和skill库管理",
+            "content": "搭建完整的知识库，收敛skill并且做优化内容",
+            "owner": "孟博士",
+            "status": "todo"
+          }
+        ],
         "isExpanded": false,
-        "level": 3
+        "level": 2
+      },
+      {
+        "id": "TA-1775635542143-cb31ol",
+        "name": "NX-AI推进",
+        "tool": "NX引擎编辑器的AI相关接口规划与推进",
+        "notes": "",
+        "forecastLevels": {
+          "apr": 2,
+          "may": 2,
+          "jun": 3
+        },
+        "tasks": [
+          {
+            "id": "task-1775635575947-2-shbl9s",
+            "month": "apr",
+            "name": "引擎接口提需规划",
+            "content": "各环节基于天工和NX提需推进和相关盘点",
+            "owner": "孟博士",
+            "status": "doing"
+          },
+          {
+            "id": "task-1775635628474-2-rxwf50",
+            "month": "jun",
+            "name": "相关接口开发完成初版",
+            "content": "集成到天工接口",
+            "owner": "孟博士",
+            "status": "todo"
+          }
+        ],
+        "isExpanded": false,
+        "level": 1
       }
     ],
     "TA啊": [],
@@ -1179,26 +1252,26 @@ export const DEFAULT_DATA = {
         "id": "UGC生产-1775211439944-ursfiq",
         "name": "设计UGC生成",
         "tool": "游戏内置banana",
-        "notes": "",
+        "notes": "生成效果优化和玩家反馈",
         "forecastLevels": {
           "apr": null,
-          "may": null,
+          "may": 4,
           "jun": 4
         },
         "tasks": [
           {
             "id": "task-1775212513189-0-i8hnxn",
-            "month": "may",
+            "month": "apr",
             "name": "游戏客户端投放",
             "content": "跟进到外放客户端测试OK",
             "owner": "煊赫",
-            "status": "todo"
+            "status": "doing"
           },
           {
             "id": "task-1775545933745-0-5wu2vk",
-            "month": "jun",
+            "month": "may",
             "name": "优化生成效果流程",
-            "content": "生图模型都需要优化",
+            "content": "生图模型都需要优化，banana+即梦5.0",
             "owner": "煊赫",
             "status": "todo"
           }
@@ -1210,26 +1283,26 @@ export const DEFAULT_DATA = {
         "id": "UGC生产-1775211469798-s2ko4k",
         "name": "模型UGC生成",
         "tool": "游戏内置第三方AI模型",
-        "notes": "",
+        "notes": "生成效果优化和玩家反馈",
         "forecastLevels": {
           "apr": null,
-          "may": null,
+          "may": 4,
           "jun": 4
         },
         "tasks": [
           {
             "id": "task-1775547273293-1-waxy6d",
-            "month": "may",
+            "month": "apr",
             "name": "游戏客户端投放",
             "content": "跟进到外放客户端测试OK",
             "owner": "煊赫",
-            "status": "todo"
+            "status": "doing"
           },
           {
             "id": "task-1775547282413-1-o3lq8p",
-            "month": "apr",
+            "month": "may",
             "name": "优化生成效果流程",
-            "content": "3D生成模型都需要优化，看供应商",
+            "content": "3D生成模型都需要优化，看供应商tripo",
             "owner": "煊赫",
             "status": "todo"
           }
@@ -1238,29 +1311,29 @@ export const DEFAULT_DATA = {
         "level": 3
       },
       {
-        "id": "UGC生产-1775211533303-37nwjs",
-        "name": "动作特效适配",
-        "tool": "自动导表替换",
+        "id": "UGC生产-1775634463316-ednl1t",
+        "name": "预设动作制作",
+        "tool": "",
         "notes": "",
         "forecastLevels": {
-          "apr": 3,
-          "may": 3,
+          "apr": 2,
+          "may": 4,
           "jun": 4
         },
         "tasks": [
           {
-            "id": "task-1775547310757-2-5qnyjf",
+            "id": "task-1775634488274-2-40wqga",
             "month": "apr",
-            "name": "配置完全agent",
-            "content": "自动化配置",
-            "owner": "煊赫",
-            "status": "todo"
+            "name": "跑通重映射骨骼 ",
+            "content": "UGC制作的模型映射到预设动作上",
+            "owner": "军彪",
+            "status": "done"
           },
           {
-            "id": "task-1775547345981-2-rek56y",
-            "month": "jun",
-            "name": "完全自动化",
-            "content": "仅审核",
+            "id": "task-1775634559516-2-1hj14r",
+            "month": "may",
+            "name": "客户端自运行",
+            "content": "无需人工配置审核，直接面向玩家",
             "owner": "煊赫",
             "status": "todo"
           }
@@ -1270,11 +1343,4 @@ export const DEFAULT_DATA = {
       }
     ]
   }
-};
-
-/**
- * 是否使用默认数据模式
- * - true: 部署模式，使用 DEFAULT_DATA，只读
- * - false: 开发模式，使用 localStorage，可编辑
- */
-export const USE_DEFAULT_DATA = true;
+} as const;
