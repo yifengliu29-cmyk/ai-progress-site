@@ -20,6 +20,8 @@ function App({ readOnly = false }: { readOnly?: boolean }) {
     setIsLoading(false)
   }, [])
 
+  // 始终进行密码验证，无论是开发模式还是部署模式
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (password === ACCESS_PASSWORD) {

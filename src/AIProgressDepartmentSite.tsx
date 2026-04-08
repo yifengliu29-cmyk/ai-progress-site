@@ -46,17 +46,17 @@ const DEFAULT_STEPS = [
 ];
 
 const glass =
-  "backdrop-blur-xl bg-white/55 border border-white/50 shadow-[0_12px_40px_rgba(160,140,200,0.16)]";
+  "backdrop-blur-3xl bg-white/25 border border-white/80 shadow-[0_8px_32px_rgba(140,120,180,0.15)]";
 const softPanel =
-  "backdrop-blur-xl bg-white/42 border border-white/45 shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_10px_30px_rgba(160,140,200,0.10)]";
+  "backdrop-blur-3xl bg-white/12 border border-white/75 shadow-[inset_0_1px_0_rgba(255,255,255,0.95),0_6px_24px_rgba(140,120,180,0.1)]";
 
 const LEVEL_SURFACES = [
-  "bg-slate-50 text-slate-400 border-slate-200",
-  "bg-violet-50 text-violet-600 border-violet-200",
+  "bg-slate-50 text-slate-500 border-slate-200",
   "bg-violet-100 text-violet-700 border-violet-300",
-  "bg-purple-200 text-purple-800 border-purple-300",
-  "bg-purple-400 text-white border-purple-500",
+  "bg-violet-200 text-violet-800 border-violet-400",
+  "bg-purple-300 text-purple-900 border-purple-400",
   "bg-purple-600 text-white border-purple-700",
+  "bg-purple-900 text-white border-purple-950",
 ];
 
 function clampLevel(level: number): number {
@@ -382,7 +382,7 @@ function DraggableSubStepRow({
       } ${
         item.isExpanded
           ? `${levelPillClass(item.level)} shadow-[0_18px_56px_rgba(160,140,200,0.26)]`
-          : `${glass} ${levelPillClass(item.level)} hover:-translate-y-[1px] hover:shadow-[0_14px_42px_rgba(160,140,200,0.20)]`
+          : `${levelPillClass(item.level)} hover:-translate-y-[1px] hover:shadow-[0_14px_42px_rgba(160,140,200,0.20)]`
       }`}
     >
       <div
@@ -432,7 +432,7 @@ function DraggableSubStepRow({
         <button
           type="button"
           onClick={onToggleExpand}
-          className={`flex h-9 w-9 items-center justify-center rounded-xl text-sm text-slate-600 transition-all duration-200 hover:scale-[1.04] hover:bg-white/78 ${softPanel}`}
+          className={`flex h-9 w-9 items-center justify-center rounded-xl text-sm text-slate-600 transition-all duration-200 hover:scale-110 hover:bg-white/90 hover:shadow-[0_4px_12px_rgba(140,120,180,0.12)] active:scale-95 ${softPanel}`}
           title={item.isExpanded ? "收起详情" : "展开详情"}
         >
           <span className={`transition ${item.isExpanded ? "rotate-180" : ""}`}>▾</span>
@@ -442,7 +442,7 @@ function DraggableSubStepRow({
           <button
             type="button"
             onClick={onDelete}
-            className="flex h-9 w-9 items-center justify-center rounded-xl border border-red-200 bg-white/55 text-sm text-red-600 transition-all duration-200 hover:scale-[1.04] hover:bg-red-50"
+            className="flex h-9 w-9 items-center justify-center rounded-xl border border-red-200 bg-white/55 text-sm text-red-600 transition-all duration-200 hover:scale-110 hover:bg-red-50 hover:shadow-[0_4px_12px_rgba(220,38,38,0.2)] active:scale-95"
             aria-label="删除子环节"
           >
             ×
@@ -451,7 +451,7 @@ function DraggableSubStepRow({
       </div>
 
       {item.isExpanded && (
-        <div className="mt-3 space-y-3 rounded-[20px] border border-white/45 bg-white/35 p-3 backdrop-blur-xl">
+        <div className="mt-3 space-y-3 rounded-[20px] border border-white/70 bg-white/25 p-3 backdrop-blur-3xl">
           <div className={`rounded-[18px] px-3 py-2.5 transition-all duration-300 ${softPanel}`}>
             <div className="flex flex-wrap items-center gap-4">
               {MONTH_KEYS.map((month) => (
@@ -474,7 +474,7 @@ function DraggableSubStepRow({
                 <button
                   type="button"
                   onClick={onTaskAdd}
-                  className="rounded-xl border border-white/60 bg-white/60 px-3 py-2 text-xs text-slate-700 transition hover:bg-white/80"
+                  className="rounded-xl border border-white/60 bg-white/60 px-3 py-2 text-xs text-slate-700 transition-all duration-200 hover:scale-105 hover:bg-white/90 hover:shadow-[0_4px_12px_rgba(140,120,180,0.12)] active:scale-95"
                 >
                   添加任务
                 </button>
@@ -483,7 +483,7 @@ function DraggableSubStepRow({
 
             <div className="space-y-2.5">
               {(item.tasks || []).map((task, taskIndex) => (
-                <div key={task.id} className={`rounded-[16px] p-2.5 transition-all duration-200 hover:bg-white/62 ${softPanel}`}>
+                <div key={task.id} className={`rounded-[16px] p-2.5 transition-all duration-200 hover:bg-white/70 hover:-translate-y-[1px] hover:shadow-[0_4px_16px_rgba(140,120,180,0.1)] ${softPanel}`}>
                   <div className={`grid gap-2.5 ${readOnly ? "grid-cols-[90px_1.2fr_2.4fr_0.7fr_120px]" : "xl:grid-cols-[90px_1.2fr_2.4fr_0.7fr_120px_36px]"} grid-cols-[90px_1.2fr_2.4fr_0.7fr_120px]`}>
                     {readOnly ? (
                       <div className="h-9 flex items-center px-3 text-sm text-slate-500 rounded-xl">{MONTH_LABELS[task.month]}</div>
@@ -555,7 +555,7 @@ function DraggableSubStepRow({
                       <button
                         type="button"
                         onClick={() => onTaskDelete(taskIndex)}
-                        className="flex h-9 w-9 items-center justify-center rounded-xl border border-red-200 bg-white/55 text-sm text-red-600 transition hover:bg-red-50"
+                        className="flex h-9 w-9 items-center justify-center rounded-xl border border-red-200 bg-white/55 text-sm text-red-600 transition-all duration-200 hover:scale-110 hover:bg-red-50 hover:shadow-[0_4px_12px_rgba(220,38,38,0.2)] active:scale-95"
                       >
                         ×
                       </button>
@@ -866,6 +866,28 @@ export default function AIProgressDepartmentSite({ readOnly = false }: { readOnl
     return { doing, done };
   }, [steps, subSteps]);
 
+  const monthlyTaskStats = useMemo(() => {
+    const result: Record<string, { total: number; done: number; doing: number; todo: number }> = {};
+    for (const month of MONTH_KEYS) {
+      let done = 0;
+      let doing = 0;
+      let todo = 0;
+      for (const step of steps) {
+        for (const item of subSteps[step] || []) {
+          for (const task of item.tasks || []) {
+            if (task.month === month) {
+              if (task.status === "done") done++;
+              else if (task.status === "doing") doing++;
+              else todo++;
+            }
+          }
+        }
+      }
+      result[month] = { total: done + doing + todo, done, doing, todo };
+    }
+    return result;
+  }, [steps, subSteps]);
+
   useEffect(() => {
     // 部署模式：使用默认数据（只读）
     if (USE_DEFAULT_DATA) {
@@ -1108,13 +1130,13 @@ export default function AIProgressDepartmentSite({ readOnly = false }: { readOnl
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.9),_rgba(243,240,255,0.95)_32%,_rgba(236,228,255,0.78)_68%,_rgba(245,240,252,0.96)_100%)] p-6 text-slate-900">
+    <div className="min-h-screen p-6 text-slate-900 bg-gradient-to-br from-slate-50 via-violet-50 to-purple-100">
       <div className="mb-1 text-right text-[10px] leading-none text-slate-500 select-none">V1.03</div>
       <div className="mx-auto max-w-7xl">
-        <div className="relative overflow-visible rounded-[36px] border border-white/55 bg-white/30 p-5 shadow-[0_20px_60px_rgba(160,140,200,0.16)] backdrop-blur-2xl">
-          <div className="pointer-events-none absolute -left-10 top-16 h-20 w-20 rounded-full bg-[#f5eeff]/60 blur-2xl" />
-          <div className="pointer-events-none absolute bottom-16 left-12 h-28 w-28 rounded-full bg-[#e8d8ff]/55 blur-2xl" />
-          <div className="pointer-events-none absolute right-24 top-12 h-24 w-24 rounded-full bg-[#ddd0ff]/70 blur-2xl" />
+        <div className="relative overflow-visible rounded-[36px] border border-white/80 bg-white/10 p-5 shadow-[0_12px_48px_rgba(140,120,180,0.15)] backdrop-blur-3xl">
+          <div className="pointer-events-none absolute -left-10 top-16 h-20 w-20 rounded-full bg-[#f5eeff]/50 blur-2xl" />
+          <div className="pointer-events-none absolute bottom-16 left-12 h-28 w-28 rounded-full bg-[#e8d8ff]/45 blur-2xl" />
+          <div className="pointer-events-none absolute right-24 top-12 h-24 w-24 rounded-full bg-[#ddd0ff]/55 blur-2xl" />
 
           <header className={`rounded-[30px] p-7 ${glass}`}>
             <div className="flex flex-col gap-6 xl:flex-row xl:items-start xl:justify-between">
@@ -1128,7 +1150,7 @@ export default function AIProgressDepartmentSite({ readOnly = false }: { readOnl
                           type="button"
                           onClick={handleExportHTML}
                           disabled={exportingHtml}
-                          className="rounded-full border border-purple-200/60 bg-white/50 px-3 py-1 text-xs text-purple-600 transition hover:bg-white/80 disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="rounded-full border border-purple-200/60 bg-white/50 px-3 py-1 text-xs text-purple-600 transition-all duration-200 hover:scale-105 hover:bg-white/90 hover:shadow-[0_4px_12px_rgba(140,120,180,0.15)] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:bg-white/50 disabled:hover:shadow-none"
                           title="导出为可双击打开的只读网页"
                         >
                           {exportingHtml ? "⏳ 构建中..." : "📄 导出网页"}
@@ -1136,7 +1158,7 @@ export default function AIProgressDepartmentSite({ readOnly = false }: { readOnl
                         <button
                           type="button"
                           onClick={handleExportData}
-                          className="rounded-full border border-purple-200/60 bg-white/50 px-3 py-1 text-xs text-purple-600 transition hover:bg-white/80"
+                          className="rounded-full border border-purple-200/60 bg-white/50 px-3 py-1 text-xs text-purple-600 transition-all duration-200 hover:scale-105 hover:bg-white/90 hover:shadow-[0_4px_12px_rgba(140,120,180,0.15)] active:scale-95"
                           title="导出数据为 JSON 文件"
                         >
                           ↓ 导出
@@ -1144,7 +1166,7 @@ export default function AIProgressDepartmentSite({ readOnly = false }: { readOnl
                         <button
                           type="button"
                           onClick={() => importFileRef.current?.click()}
-                          className="rounded-full border border-purple-200/60 bg-white/50 px-3 py-1 text-xs text-purple-600 transition hover:bg-white/80"
+                          className="rounded-full border border-purple-200/60 bg-white/50 px-3 py-1 text-xs text-purple-600 transition-all duration-200 hover:scale-105 hover:bg-white/90 hover:shadow-[0_4px_12px_rgba(140,120,180,0.15)] active:scale-95"
                           title="从 JSON 文件导入数据"
                         >
                           ↑ 导入
@@ -1182,6 +1204,44 @@ export default function AIProgressDepartmentSite({ readOnly = false }: { readOnl
                   {departmentName || "部门名称"}
                 </div>
                 <p className="mt-3 text-sm text-slate-500">用于规划和记录部门 AI 推进进展，支持当前成熟度、4-6月目标等级、任务与月度完成情况统计。</p>
+
+                {/* 每月任务进度条 */}
+                <div className="mt-6 space-y-3">
+                  {MONTH_KEYS.map((month) => {
+                    const stats = monthlyTaskStats[month];
+                    if (stats.total === 0) return null;
+                    const maxTasks = Math.max(
+                      monthlyTaskStats[MONTH_KEYS[0]].total,
+                      monthlyTaskStats[MONTH_KEYS[1]].total,
+                      monthlyTaskStats[MONTH_KEYS[2]].total
+                    );
+                    const barWidthPercent = (stats.total / maxTasks) * 100;
+                    return (
+                      <div key={month}>
+                        <div className="text-xs text-slate-500 mb-1.5">
+                          {MONTH_LABELS[month]}任务
+                        </div>
+                        <div
+                          className="flex h-3 rounded-full overflow-hidden"
+                          style={{ width: `${barWidthPercent}%` }}
+                        >
+                          <div
+                            className="h-full bg-purple-700 rounded-l-full"
+                            style={{ width: `${(stats.done / stats.total) * 100}%` }}
+                          />
+                          <div
+                            className="h-full bg-violet-300"
+                            style={{ width: `${(stats.doing / stats.total) * 100}%` }}
+                          />
+                          <div
+                            className="h-full bg-slate-300 rounded-r-full"
+                            style={{ width: `${(stats.todo / stats.total) * 100}%` }}
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
 
               <div className="flex w-full flex-col gap-4 xl:w-[360px]">
@@ -1236,7 +1296,7 @@ export default function AIProgressDepartmentSite({ readOnly = false }: { readOnl
                       placeholder="自定义环节"
                       className={`h-12 flex-1 rounded-2xl px-4 text-sm outline-none ${softPanel}`}
                     />
-                    <button type="button" onClick={addCustomStep} className="rounded-2xl bg-white/75 px-5 text-sm font-medium text-slate-700 transition hover:bg-white">
+                    <button type="button" onClick={addCustomStep} className="rounded-2xl bg-white/75 px-5 text-sm font-medium text-slate-700 transition-all duration-200 hover:scale-105 hover:bg-white hover:shadow-[0_4px_12px_rgba(140,120,180,0.12)] active:scale-95">
                       添加
                     </button>
                   </div>
@@ -1275,7 +1335,7 @@ export default function AIProgressDepartmentSite({ readOnly = false }: { readOnl
                               e.stopPropagation();
                               deleteStep(step);
                             }}
-                            className="flex h-7 w-7 items-center justify-center rounded-full border border-red-200 bg-white/55 text-xs text-red-600 transition-all duration-200 hover:scale-[1.04] hover:bg-red-50"
+                            className="flex h-7 w-7 items-center justify-center rounded-full border border-red-200 bg-white/55 text-xs text-red-600 transition-all duration-200 hover:scale-110 hover:bg-red-50 hover:shadow-[0_4px_12px_rgba(220,38,38,0.2)] active:scale-95"
                             aria-label={`删除${step}`}
                             title="删除环节"
                           >
@@ -1359,10 +1419,10 @@ export default function AIProgressDepartmentSite({ readOnly = false }: { readOnl
                           <div className="text-sm font-medium text-slate-700">新增</div>
                         </div>
                         <div className="flex gap-2">
-                          <button type="button" onClick={() => setExcelModalOpen(true)} className="rounded-2xl bg-purple-100/80 px-4 py-3 text-sm font-medium text-purple-700 transition hover:bg-purple-200/80">
+                          <button type="button" onClick={() => setExcelModalOpen(true)} className="rounded-2xl bg-purple-100/80 px-4 py-3 text-sm font-medium text-purple-700 transition-all duration-200 hover:scale-105 hover:bg-purple-200/90 hover:shadow-[0_6px_20px_rgba(140,120,180,0.2)] active:scale-95">
                             📊 导入 Excel
                           </button>
-                          <button type="button" onClick={addSubStep} className="rounded-2xl bg-white/80 px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-white">
+                          <button type="button" onClick={addSubStep} className="rounded-2xl bg-white/80 px-4 py-3 text-sm font-medium text-slate-700 transition-all duration-200 hover:scale-105 hover:bg-white hover:shadow-[0_6px_20px_rgba(140,120,180,0.15)] active:scale-95">
                             添加子环节
                           </button>
                         </div>
@@ -1531,11 +1591,11 @@ function ExcelImportModal({
   return createPortal(
     <div className="fixed inset-0 z-[999] flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" onClick={handleClose} />
-      <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[28px] border border-white/50 bg-white/90 p-6 shadow-[0_24px_64px_rgba(160,140,200,0.25)] backdrop-blur-2xl">
+      <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[28px] border border-white/70 bg-white/30 p-6 shadow-[0_24px_64px_rgba(160,140,200,0.25)] backdrop-blur-3xl">
         {/* 标题 */}
         <div className="flex items-center justify-between mb-5">
           <h2 className="text-xl font-semibold text-slate-900">📊 导入 Excel 子环节</h2>
-          <button onClick={handleClose} className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-500 transition hover:bg-slate-200">✕</button>
+          <button onClick={handleClose} className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-500 transition-all duration-200 hover:bg-slate-200 hover:scale-110 hover:shadow-[0_4px_12px_rgba(100,116,139,0.2)] active:scale-95">✕</button>
         </div>
 
         {/* 上传区域 */}
@@ -1544,7 +1604,7 @@ function ExcelImportModal({
             <div className="flex flex-col items-center justify-center gap-4 rounded-2xl border-2 border-dashed border-purple-200 bg-purple-50/50 p-12 text-center transition hover:border-purple-300 hover:bg-purple-50">
               <div className="text-4xl">📊</div>
               <div className="text-sm text-slate-600">
-                <button onClick={() => fileInputRef.current?.click()} className="font-medium text-purple-600 underline">点击上传 Excel 文件</button>
+                <button onClick={() => fileInputRef.current?.click()} className="font-medium text-purple-600 underline transition-all duration-200 hover:text-purple-700 hover:no-underline">点击上传 Excel 文件</button>
                 <span className="ml-2">或拖拽文件到此处</span>
               </div>
               <div className="text-xs text-slate-400">支持 .xlsx / .xls / .csv 格式</div>
@@ -1597,7 +1657,7 @@ function ExcelImportModal({
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-xs text-slate-400">#{i + 1}</div>
                     <button onClick={() => setParsedRows((prev) => prev.filter((_, j) => j !== i))}
-                      className="text-xs text-red-400 transition hover:text-red-600">删除</button>
+                      className="text-xs text-red-400 transition-all duration-200 hover:text-red-600 hover:underline">删除</button>
                   </div>
                   <div className="grid grid-cols-2 gap-2">
                     <div>
@@ -1641,8 +1701,8 @@ function ExcelImportModal({
             </div>
 
             <div className="flex justify-end gap-3">
-              <button onClick={() => { setParsedRows([]); }} className="rounded-xl px-4 py-2.5 text-sm text-slate-600 transition hover:bg-slate-100">重新选择文件</button>
-              <button onClick={handleConfirm} className="rounded-xl bg-purple-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-purple-700">
+              <button onClick={() => { setParsedRows([]); }} className="rounded-xl px-4 py-2.5 text-sm text-slate-600 transition-all duration-200 hover:bg-slate-100 hover:scale-105 active:scale-95">重新选择文件</button>
+              <button onClick={handleConfirm} className="rounded-xl bg-purple-600 px-5 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-purple-700 hover:scale-105 hover:shadow-[0_6px_20px_rgba(140,120,180,0.3)] active:scale-95">
                 确认导入 ({parsedRows.length} 条)
               </button>
             </div>
