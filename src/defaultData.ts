@@ -7,6 +7,9 @@
  * 3. 部署到 Vercel 后，其他人打开链接就能看到你的数据
  */
 
+// 部署模式：true = 使用 DEFAULT_DATA（只读），false = 使用 localStorage（可编辑）
+export const USE_DEFAULT_DATA = true;
+
 export const DEFAULT_DATA = {
   "_version": 1,
   "_exportedAt": "2026-04-08T09:06:53.321Z",
